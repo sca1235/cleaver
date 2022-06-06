@@ -4,7 +4,6 @@ namespace Aschmelyun\Cleaver\Engines;
 
 use Aschmelyun\Cleaver\Compilers\JsonCompiler;
 use Aschmelyun\Cleaver\Compilers\MarkdownCompiler;
-use Aschmelyun\Cleaver\Engines\FileEngine;
 use Tightenco\Collect\Support\Collection;
 
 class ContentEngine

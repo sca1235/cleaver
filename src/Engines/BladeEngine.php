@@ -2,7 +2,7 @@
 
 namespace Aschmelyun\Cleaver\Engines;
 
-use Aschmelyun\Blade\Blade;
+use Aschmelyun\Cleaver\Blade;
 
 class BladeEngine
 {
@@ -15,7 +15,7 @@ class BladeEngine
 
     public function __construct(?string $basePath = null)
     {
-        $basePath = $basePath ? $basePath : dirname(__FILE__, 3);
+        $basePath = $basePath ?: dirname(__FILE__, 3);
 
         $this->viewsDir = $basePath . '/resources/views';
         $this->cacheDir = $basePath . '/cache';

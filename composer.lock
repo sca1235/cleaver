@@ -4,52 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5fa161ab166e00480b87955e5fb272a",
+    "content-hash": "518d342f9f23edfc2259bd029d573981",
     "packages": [
-        {
-            "name": "aschmelyun/laravel-blade",
-            "version": "v8.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aschmelyun/laravel-blade.git",
-                "reference": "45998a347902d1c623d354a328f1fee10aeca8e9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aschmelyun/laravel-blade/zipball/45998a347902d1c623d354a328f1fee10aeca8e9",
-                "reference": "45998a347902d1c623d354a328f1fee10aeca8e9",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/events": "^8.0.0",
-                "illuminate/view": "^8.0.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Aschmelyun\\Blade\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andrew Schmelyun",
-                    "email": "me@aschmelyun.com"
-                }
-            ],
-            "description": "A standalone component for using the Laravel Blade templating engine. Forked from Philo/Laravel-Blade.",
-            "keywords": [
-                "blade",
-                "laravel"
-            ],
-            "support": {
-                "source": "https://github.com/aschmelyun/laravel-blade/tree/v8.1.1"
-            },
-            "time": "2021-01-12T04:57:49+00:00"
-        },
         {
             "name": "codedungeon/php-cli-colors",
             "version": "1.12.2",
@@ -4611,7 +4567,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.2.5",
+        "php": "8.x",
         "ext-json": "*"
     },
     "platform-dev": [],
