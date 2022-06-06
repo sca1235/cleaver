@@ -5,6 +5,11 @@ namespace Aschmelyun\Cleaver\Compilers;
 use Aschmelyun\Cleaver\Engines\FileEngine;
 use Symfony\Component\Finder\SplFileInfo;
 use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class JsonCompiler extends Compiler
@@ -17,6 +22,11 @@ class JsonCompiler extends Compiler
 
     /**
      * @param SplFileInfo $file
+     * @throws ClientExceptionInterface
+     * @throws DecodingExceptionInterface
+     * @throws RedirectionExceptionInterface
+     * @throws ServerExceptionInterface
+     * @throws TransportExceptionInterface
      */
     public function __construct(SplFileInfo $file)
     {
