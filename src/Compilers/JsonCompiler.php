@@ -4,14 +4,25 @@ namespace Aschmelyun\Cleaver\Compilers;
 
 use Aschmelyun\Cleaver\Engines\FileEngine;
 use Symfony\Component\Finder\SplFileInfo;
-use Zttp\Zttp;
+use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class JsonCompiler extends Compiler
 {
 
+    /**
+     * @var HttpClientInterface
+     */
+    private $httpClient;
+
+    /**
+     * @param SplFileInfo $file
+     */
     public function __construct(SplFileInfo $file)
     {
         $this->file = $file;
+
+        $this->httpClient = HttpClient::create();
 
         $this->json = json_decode(
             $file->getContents()
@@ -34,10 +45,8 @@ class JsonCompiler extends Compiler
             ) {
                 $url = substr($item, 5);
                 if (filter_var($url, FILTER_VALIDATE_URL)) {
-                    $this->json->{$idx} = (object) Zttp::get($url)->json();
+                    $this->json->{$idx} = (object) $this->httpClient->request('GET', $url)->toArray();
                 }
-
-                continue;
             }
         }
 
